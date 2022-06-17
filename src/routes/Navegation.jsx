@@ -1,17 +1,15 @@
 import React from 'react'
-import {BrowserRouter, Route, Routes, NavLink, Navigate} from 'react-router-dom'
-import{ Home } from "../Components/Home"
-import{ About } from "../Components/About"
-import{ Dashboard } from "../Components/Dashboard"
-import{ Header } from "../Components/Header"
-
-import logo from '../logo.svg';
+import {BrowserRouter, Route, Routes, NavLink} from 'react-router-dom'
+import{ Home } from "../componentes/Home"
+import{ About } from "../componentes/About"
+import{ Dashboard } from "../componentes/Dashboard"
+import{ Header } from "../componentes/Header"
 
 function Navegation() {
   return (
     <BrowserRouter>
         <nav>
-            <img src={logo} alt="" />
+            
             <ul>
                 <li>
                   <NavLink to='/home' className={({ isActive }) => isActive ? 'nav-active' : ''}>
@@ -25,12 +23,12 @@ function Navegation() {
                 </li>
                 <li>
                   <NavLink to='/dashboard' className={({ isActive }) => isActive ? 'nav-active' : ''}>
-                    Students
+                    Dashboard
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to='/header' className={({ isActive }) => isActive ? 'nav-active' : ''}>
-                    Students
+                    Header
                   </NavLink>
                 </li>
             </ul>
